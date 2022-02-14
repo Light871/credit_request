@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  age: 1
+  gender: MyString
+  salary: 1
+  history_available: false
+  amaunt: 1
+  score: 1
+  approved: false
+
+two:
+  age: 1
+  gender: MyString
+  salary: 1
+  history_available: false
+  amaunt: 1
+  score: 1
+  approved: false

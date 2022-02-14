@@ -1,0 +1,40 @@
+<%= form_with(model: loan_request, local: true, class: 'credit-request-form') do |f| %>
+	<% if loan_request.errors.any? %>
+		<div class="errors">
+			<ul>
+				<% loan_request.errors.full_massages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<div class="form-group">
+		<%= f.label :age, 'Возраст' %>
+		<%= f.text_field :age %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :gender, 'Пол' %>
+		<%= f.select :gender, { 'Мужской' => 'male', 'Женский' => 'female'} %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :salary, 'Зарплата' %>
+		<%= f.text_field :salary %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :history_available, 'Есть кредитная история' %>
+		<%= f.check_box :history_available %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :amount, 'Запрошенная сумма' %>
+		<%= f.text_field :amount %>
+	</div>
+
+	<div class="form-group">
+		<%= f.submit 'Создать' %>
+	</div>
+<% end %>
